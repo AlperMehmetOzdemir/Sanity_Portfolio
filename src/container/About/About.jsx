@@ -1,47 +1,39 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
-import { images } from "../../constants";
 import "./About.scss";
-
-const abouts = [
-  {
-    title: "Web Development",
-    description: "I am a good web developer.",
-    imgUrl: images.about01,
-  },
-  {
-    title: "Web Design",
-    description: "I am a good web developer.",
-    imgUrl: images.about02,
-  },
-  {
-    title: "UI/UX",
-    description: "I am a good web developer.",
-    imgUrl: images.about03,
-  },
-  {
-    title: "Web Animations",
-    description: "I am a good web developer.",
-    imgUrl: images.about04,
-  },
-];
+import { client, urlFor } from "../../client";
 
 const About = () => {
+  const [abouts, setAbouts] = useState([]);
+
+  useEffect(() => {
+    const query = '*[_type == "abouts"]';
+    console.log("use effect working");
+    client.fetch(query).then((data) => {
+      console.log("data", data);
+      setAbouts(data);
+    });
+  }, []);
+
   return (
     <>
-      <h2 className="head-text">I know that <span>Good Design</span><br />means <span>Good Business</span></h2>
+      <h2 className="head-text">
+        I know that <span>Good Design</span>
+        <br />
+        means <span>Good Business</span>
+      </h2>
 
-      <div className="app_profiles">
+      <div className="app__profiles">
         {abouts.map((about, index) => (
           <motion.div
             whileInView={{ opacity: 1 }}
             whileHover={{ scale: 1.1 }}
             transition={{ duration: 0.5, type: "tween" }}
-            className="app__profile-item"
+            className="app__profiles-item"
             key={about.title + index}
           >
-            <img src={about.imgUrl} alt={about.title} />
+            <img src={urlFor(about.imgUrl)} alt={about.title} />
             <h2 className="bold-text" style={{ marginTop: "20px" }}>
               {about.title}
             </h2>
