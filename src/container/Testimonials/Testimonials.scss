@@ -119,7 +119,7 @@
 
     &:hover {
       img {
-        filter: grayscale();
+        filter: grayscale(0);
       }
     }
 
