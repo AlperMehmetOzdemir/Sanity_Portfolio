@@ -9,7 +9,7 @@ npm install
 npm run
 ```
 
-to start the project in a local environment. You would need to setup your own sanity backend with your personel content to fully utilize the project.
+To start the project in a local environment. You would need to setup your own sanity backend with your personel content to fully utilize the project.
 
 ## Dependencies
 
@@ -30,6 +30,33 @@ to start the project in a local environment. You would need to setup your own sa
 ```
 
 ## To Do's
-
+- [ ] Overall
+  - [ ] Use `section` and `article` tags where necessary for better semantics
+  - [ ] Populate with necessary data
+  - [ ] Select a good 2 accent light color scheme from huemint and apply it
+  - [ ] Add support for dark mode and select a color scheme from huemint for it
+- [ ] Navbar
+  - [ ] Fix logo
+  - [ ] Add container to limit width
+- [ ] Navdots
+  - [ ] Use icons rather then dots for more intuitve navigation
+  - [ ] Create a subtle animation for the icons for visual feedback
 - [ ] Header section
-  - [ ] 
+  - [ ] Create better positioning for text
+  - [ ] Add a primary and secondary CTA
+  - [ ] Change profile picture
+  - [ ] Create a orbit animation for skill circles
+- [ ] About section
+  - [ ] Fix layout so that there is a row for the title/headline
+  - [ ] Add a brief self description highlight benefits I would provide
+  - [ ] Make the animation on cards more subtle
+- [ ] Work section
+  - [ ] Rework it into "Projects" or "Portfolio" section
+  - [ ] Show associated tags as pills on the bottom of the cards.
+  - [ ] Create filter tags from retrieved projects dynamically
+- [ ] Skills section
+  - [ ] Check after populated with data
+- [ ] Testimonials section
+  - [ ] Remove testimonials section as it is unnecassary for now
+- [ ] Contact section
+  - [ ] Make sure the placeholder text is visible as labels when user input is recieved
